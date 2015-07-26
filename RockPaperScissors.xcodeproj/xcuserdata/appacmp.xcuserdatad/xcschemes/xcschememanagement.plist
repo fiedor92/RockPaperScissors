@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - RockPaperScissors WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>RockPaperScissors WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>RockPaperScissors.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>26A949E41B64C10F007F8EFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26A94A051B64C137007F8EFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

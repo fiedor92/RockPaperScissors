@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26A94A051B64C137007F8EFD"
+               BuildableName = "RockPaperScissors WatchKit App.app"
+               BlueprintName = "RockPaperScissors WatchKit App"
+               ReferencedContainer = "container:RockPaperScissors.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "26A949CC1B64C10F007F8EFD"
                BuildableName = "RockPaperScissors.app"
                BlueprintName = "RockPaperScissors"
@@ -23,14 +37,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "26A949E41B64C10F007F8EFD"
-               BuildableName = "RockPaperScissorsTests.xctest"
-               BlueprintName = "RockPaperScissorsTests"
+               BlueprintIdentifier = "26A949F81B64C137007F8EFD"
+               BuildableName = "RockPaperScissors WatchKit Extension.appex"
+               BlueprintName = "RockPaperScissors WatchKit Extension"
                ReferencedContainer = "container:RockPaperScissors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,23 +56,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "26A949E41B64C10F007F8EFD"
-               BuildableName = "RockPaperScissorsTests.xctest"
-               BlueprintName = "RockPaperScissorsTests"
-               ReferencedContainer = "container:RockPaperScissors.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "26A949CC1B64C10F007F8EFD"
-            BuildableName = "RockPaperScissors.app"
-            BlueprintName = "RockPaperScissors"
+            BlueprintIdentifier = "26A94A051B64C137007F8EFD"
+            BuildableName = "RockPaperScissors WatchKit App.app"
+            BlueprintName = "RockPaperScissors WatchKit App"
             ReferencedContainer = "container:RockPaperScissors.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,16 +76,27 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/RockPaperScissors">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "26A949CC1B64C10F007F8EFD"
-            BuildableName = "RockPaperScissors.app"
-            BlueprintName = "RockPaperScissors"
+            BlueprintIdentifier = "26A94A051B64C137007F8EFD"
+            BuildableName = "RockPaperScissors WatchKit App.app"
+            BlueprintName = "RockPaperScissors WatchKit App"
             ReferencedContainer = "container:RockPaperScissors.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "26A94A051B64C137007F8EFD"
+            BuildableName = "RockPaperScissors WatchKit App.app"
+            BlueprintName = "RockPaperScissors WatchKit App"
+            ReferencedContainer = "container:RockPaperScissors.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +106,27 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/RockPaperScissors">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "26A949CC1B64C10F007F8EFD"
-            BuildableName = "RockPaperScissors.app"
-            BlueprintName = "RockPaperScissors"
+            BlueprintIdentifier = "26A94A051B64C137007F8EFD"
+            BuildableName = "RockPaperScissors WatchKit App.app"
+            BlueprintName = "RockPaperScissors WatchKit App"
             ReferencedContainer = "container:RockPaperScissors.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "26A94A051B64C137007F8EFD"
+            BuildableName = "RockPaperScissors WatchKit App.app"
+            BlueprintName = "RockPaperScissors WatchKit App"
+            ReferencedContainer = "container:RockPaperScissors.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
