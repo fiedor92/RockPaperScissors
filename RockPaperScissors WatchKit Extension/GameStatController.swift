@@ -17,8 +17,8 @@ class GameStatController: WKInterfaceController{
     
     override func awakeWithContext(context: AnyObject?) {
         if let newDict = context as? [String: String],
-            currentScore = newDict["currentScore"],
             highScore = newDict["highScore"],
+            currentScore = newDict["currentScore"],
             gamePlayed = newDict["gamePlayes"]
         {
             gamesPlayedLabel.setText(gamePlayed)

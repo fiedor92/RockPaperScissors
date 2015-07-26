@@ -37,7 +37,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func showGameStats() {
         highScore  = getHighScoreFromDefaults()
         
-        pushControllerWithName("GameStat", context: ["currentScore":"\(score)", "highScore:": "\(highScore)", "gamePlayes":"\(gamesCounter)"])
+        pushControllerWithName("GameStat", context: ["currentScore":"\(score)", "highScore": "\(highScore)", "gamePlayes":"\(gamesCounter)"])
     }
     func play(symbol: String) {
         gamesCounter = gamesCounter + 1
