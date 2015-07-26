@@ -21,6 +21,7 @@
 		26A94A0F1B64C137007F8EFD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A94A0D1B64C137007F8EFD /* Interface.storyboard */; };
 		26A94A111B64C137007F8EFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A94A101B64C137007F8EFD /* Images.xcassets */; };
 		26A94A141B64C137007F8EFD /* RockPaperScissors WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 26A949F91B64C137007F8EFD /* RockPaperScissors WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		26A94A211B64D83F007F8EFD /* GameStatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A94A201B64D83F007F8EFD /* GameStatController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,9 @@
 		26A94A0C1B64C137007F8EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A94A0E1B64C137007F8EFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		26A94A101B64C137007F8EFD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		26A94A1C1B64CF28007F8EFD /* RockPaperScissors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RockPaperScissors.entitlements; sourceTree = "<group>"; };
+		26A94A1D1B64CF99007F8EFD /* RockPaperScissors WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "RockPaperScissors WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		26A94A201B64D83F007F8EFD /* GameStatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		26A949CF1B64C10F007F8EFD /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				26A94A1C1B64CF28007F8EFD /* RockPaperScissors.entitlements */,
 				26A949D21B64C10F007F8EFD /* AppDelegate.swift */,
 				26A949D71B64C10F007F8EFD /* ViewController.swift */,
 				26A949D91B64C10F007F8EFD /* Main.storyboard */,
@@ -174,7 +179,9 @@
 		26A949FA1B64C137007F8EFD /* RockPaperScissors WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				26A94A1D1B64CF99007F8EFD /* RockPaperScissors WatchKit Extension.entitlements */,
 				26A949FE1B64C137007F8EFD /* InterfaceController.swift */,
+				26A94A201B64D83F007F8EFD /* GameStatController.swift */,
 				26A94A001B64C137007F8EFD /* NotificationController.swift */,
 				26A94A021B64C137007F8EFD /* Images.xcassets */,
 				26A949FB1B64C137007F8EFD /* Supporting Files */,
@@ -293,6 +300,12 @@
 				TargetAttributes = {
 					26A949CC1B64C10F007F8EFD = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2B7PA75W9Z;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					26A949E41B64C10F007F8EFD = {
 						CreatedOnToolsVersion = 6.4;
@@ -300,9 +313,16 @@
 					};
 					26A949F81B64C137007F8EFD = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2B7PA75W9Z;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					26A94A051B64C137007F8EFD = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2B7PA75W9Z;
 					};
 				};
 			};
@@ -389,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26A94A011B64C137007F8EFD /* NotificationController.swift in Sources */,
+				26A94A211B64D83F007F8EFD /* GameStatController.swift in Sources */,
 				26A949FF1B64C137007F8EFD /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,9 +549,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RockPaperScissors/RockPaperScissors.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RockPaperScissors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -538,9 +563,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RockPaperScissors/RockPaperScissors.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RockPaperScissors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -582,6 +611,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -590,6 +621,7 @@
 				INFOPLIST_FILE = "RockPaperScissors WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -600,10 +632,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = RockPaperScissors_WatchKit_Extension;
 				INFOPLIST_FILE = "RockPaperScissors WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -613,6 +648,9 @@
 		26A94A191B64C137007F8EFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "RockPaperScissors WatchKit Extension/RockPaperScissors WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -620,6 +658,7 @@
 				INFOPLIST_FILE = "RockPaperScissors WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -627,9 +666,13 @@
 		26A94A1A1B64C137007F8EFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "RockPaperScissors WatchKit Extension/RockPaperScissors WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "RockPaperScissors WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -653,6 +696,7 @@
 				26A949F11B64C10F007F8EFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26A949F21B64C10F007F8EFD /* Build configuration list for PBXNativeTarget "RockPaperScissorsTests" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +705,7 @@
 				26A949F41B64C10F007F8EFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26A94A151B64C137007F8EFD /* Build configuration list for PBXNativeTarget "RockPaperScissors WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +714,7 @@
 				26A94A171B64C137007F8EFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26A94A181B64C137007F8EFD /* Build configuration list for PBXNativeTarget "RockPaperScissors WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -677,6 +723,7 @@
 				26A94A1A1B64C137007F8EFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

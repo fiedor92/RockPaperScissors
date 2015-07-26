@@ -12,36 +12,57 @@
                     <items>
                         <group width="1" height="46" alignment="left" id="h2x-xT-pyy">
                             <items>
-                                <button width="41" height="44.5" alignment="left" backgroundImage="paper" id="40b-tC-5Ah"/>
-                                <button width="41" height="44.5" alignment="right" backgroundImage="scissors" id="i9C-QJ-XuJ"/>
-                                <button width="41" height="44.5" alignment="center" backgroundImage="rock" id="PF6-wv-NtO"/>
+                                <button width="41" height="44.5" alignment="left" backgroundImage="paper" id="40b-tC-5Ah">
+                                    <connections>
+                                        <action selector="choosePaper" destination="AgC-eL-Hgc" id="T4V-9M-RPk"/>
+                                    </connections>
+                                </button>
+                                <button width="41" height="44.5" alignment="right" backgroundImage="scissors" id="i9C-QJ-XuJ">
+                                    <connections>
+                                        <action selector="chooseScissors" destination="AgC-eL-Hgc" id="VEl-Xy-hJL"/>
+                                    </connections>
+                                </button>
+                                <button width="41" height="44.5" alignment="center" backgroundImage="rock" id="PF6-wv-NtO">
+                                    <connections>
+                                        <action selector="chooseRock" destination="AgC-eL-Hgc" id="cL9-DC-S8Q"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                         <label alignment="center" text="vs" textAlignment="center" id="U9A-jP-4ZZ">
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
-                        <imageView width="41" alignment="center" id="rTg-v6-2IQ"/>
+                        <imageView width="41" height="29" alignment="center" id="rTg-v6-2IQ"/>
                         <label alignment="center" text="You win!" textAlignment="center" id="zcx-aN-dIQ">
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                         <group width="1" alignment="left" id="wGf-WV-zF9">
                             <items>
                                 <label alignment="left" text="Score: 0" id="FB4-ZM-9vX"/>
-                                <label alignment="right" text="Info" id="m9i-bD-DF2"/>
+                                <button width="63" alignment="right" title="Info" id="xcB-N2-ZMn">
+                                    <connections>
+                                        <action selector="showGameStats" destination="AgC-eL-Hgc" id="qDS-CK-dEa"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="oponentSymbol" destination="rTg-v6-2IQ" id="RNR-rJ-Cbx"/>
+                        <outlet property="resultLabel" destination="zcx-aN-dIQ" id="zAf-V9-H0f"/>
+                        <outlet property="scoreLabel" destination="FB4-ZM-9vX" id="8Qj-Ed-0AX"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="342.75"/>
         </scene>
-        <!--Interface Controller-->
+        <!--GameStat-->
         <scene sceneID="7iM-Tz-1nq">
             <objects>
-                <controller id="s22-w0-szK">
+                <controller identifier="GameStat" id="s22-w0-szK" customClass="GameStatController" customModule="RockPaperScissors_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Current score" id="oyF-S8-ZvF"/>
-                        <label alignment="right" text="0" id="ZGm-bM-QrZ"/>
+                        <label width="10" alignment="right" text="0" id="ZGm-bM-QrZ"/>
                         <separator alignment="left" id="hLC-op-2wl"/>
                         <label alignment="left" text="High score" id="hmC-Wl-Chc"/>
                         <label alignment="right" text="0" id="HxT-Qe-XZE"/>
@@ -49,9 +70,14 @@
                         <label alignment="left" text="Games Played" id="VMJ-g3-Lyg"/>
                         <label alignment="right" text="0" id="s2A-ah-F2E"/>
                     </items>
+                    <connections>
+                        <outlet property="currentScoreLabel" destination="ZGm-bM-QrZ" id="Lqv-qe-77e"/>
+                        <outlet property="gamesPlayedLabel" destination="s2A-ah-F2E" id="GAB-vC-Gc9"/>
+                        <outlet property="highScoreLabel" destination="HxT-Qe-XZE" id="81D-gy-hBG"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="438" y="346"/>
+            <point key="canvasLocation" x="443" y="347.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
