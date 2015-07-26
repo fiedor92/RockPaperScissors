@@ -23,6 +23,12 @@ class InterfaceController: WKInterfaceController {
     var highScore = 0
     let symbols = ["rock", "paper", "scissors"]
     
+    @IBAction func resetGame() {
+        oponentSymbol.setImage(nil)
+        score = 0
+        resultLabel.setText("Tap  icon to start")
+        scoreLabel.setText("0")
+    }
     @IBAction func choosePaper() {
         play("paper")
     }

@@ -47,6 +47,15 @@
                             </items>
                         </group>
                     </items>
+                    <menu key="menu" id="kKU-xy-yQh">
+                        <items>
+                            <menuItem title="Reset" icon="repeat" id="BAQ-6a-J9P">
+                                <connections>
+                                    <action selector="resetGame" destination="AgC-eL-Hgc" id="mfY-q9-wsT"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="oponentSymbol" destination="rTg-v6-2IQ" id="RNR-rJ-Cbx"/>
                         <outlet property="resultLabel" destination="zcx-aN-dIQ" id="zAf-V9-H0f"/>
