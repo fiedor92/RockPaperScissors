@@ -102,5 +102,15 @@ class InterfaceController: WKInterfaceController {
         }
         
     }
-
+    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
+        if (identifier != nil){
+            play(identifier!)
+        }
+    }
+    
+    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
+        if (identifier != nil){
+            play(identifier!)
+        }
+    }
 }

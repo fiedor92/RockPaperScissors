@@ -17,6 +17,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var categories = NSMutableSet()
+        var playRock = UIMutableUserNotificationAction()
+        playRock.title = "Play Rock"
+        playRock.identifier = "rock"
+        playRock.activationMode = UIUserNotificationActivationMode.Foreground
+        playRock.authenticationRequired = false
+        
+        var playPaper = UIMutableUserNotificationAction()
+        playPaper.title = "Play Paper"
+        playPaper.identifier = "paper"
+        playPaper.activationMode = UIUserNotificationActivationMode.Foreground
+        playPaper.authenticationRequired = false
+        
+        var playScissors = UIMutableUserNotificationAction()
+        playScissors.title = "Play scissors"
+        playScissors.identifier = "scissors"
+        playScissors.activationMode = UIUserNotificationActivationMode.Foreground
+        playScissors.authenticationRequired = false
+        
+        let actionArray = [AnyObject](arrayLiteral: playPaper, playRock, playScissors)
+        
+        var gameCategory = UIMutableUserNotificationCategory()
+        gameCategory.identifier = "gameCategory"
+        gameCategory.setActions(actionArray, forContext: UIUserNotificationActionContext.Default)
+        //gameCategory.setActions([playPaper], forContext: UIUserNotificationActionContext.Default)
+        //gameCategory.setActions([playScissors], forContext: UIUserNotificationActionContext.Default)
+        
+        categories.addObject(gameCategory)
+        var settings = UIUserNotificationSettings(forTypes: (.Alert | .Badge | .Sound), categories: categories as Set<NSObject>)
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        
         return true
     }
 
